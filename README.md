@@ -1,5 +1,5 @@
-tc-red-flag/
-│
+# tc-red-flag/
+
 ├── extension/        # Browser extension (frontend)
 ├── backend/          # API + LLM logic
 ├── shared/           # Shared types & constants
@@ -8,38 +8,37 @@ tc-red-flag/
 └── .gitignore
 
 
-extension/
-│
+## extension/
+
 ├── manifest.json
 │
 ├── content/
-│   ├── extractText.js      # DOM scraping logic
-│   ├── highlightClauses.js # Highlight risky text
-│   └── index.js            # Entry for content scripts
+│   ├── extractText.js        # DOM scraping logic
+│   ├── highlightClauses.js   # Highlight risky text
+│   └── index.js              # Entry for content scripts
 │
 ├── background/
-│   ├── index.js            # Service worker
-│   └── apiClient.js        # Calls backend
+│   ├── index.js              # Service worker
+│   └── apiClient.js          # Calls backend
 │
 ├── popup/
 │   ├── popup.html
 │   ├── popup.js
-│   ├── popup.css
+│   └── popup.css
 │
 ├── assets/
 │   ├── icons/
 │   └── logo.png
 │
 └── utils/
-    ├── heuristics.js       # Detect T&C pages
-    └── sanitize.js         # Clean extracted text
+    ├── heuristics.js         # Detect T&C pages
+    └── sanitize.js           # Clean extracted text
 
 
-backend/
-│
+## backend/
+
 ├── src/
-│   │
-│   ├── server.js           # Express/Fastify entry
+│   ├── server.js             # Express/Fastify entry
 │   │
 │   ├── routes/
 │   │   └── analyze.route.js
@@ -71,8 +70,8 @@ backend/
 └── README.md
 
 
-shared/
-│
+## shared/
+
 ├── types/
 │   └── redFlagReport.ts
 │
@@ -81,12 +80,10 @@ shared/
     └── keywords.js
 
 
+## docs/
 
-docs/
-│
 ├── architecture.md
 ├── prompt-design.md
 ├── threat-model.md
-└── demo-script.md
-
+└── demo
 
